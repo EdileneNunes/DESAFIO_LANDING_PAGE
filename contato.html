@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Meu Site</title>
+    <link rel="stylesheet" type="text/css" href="./CSS/style.css" />
 </head>
 
 <body>
@@ -20,7 +21,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="contato.html">
+                        <a href="contato.html" class="botao botao-destaque">
                             contato
                         </a>
                     </li>
@@ -46,66 +47,80 @@
                     </legend>
                     <form in="frmInscricao" action="contato.php" method="post">
 
-                        <label>Nome:</label><br>
-                        <input type="text" required="required" id="txNome" maxlength="100" size="50"><br><bR>
-
+                        <div>
+                            <label>Nome:</label><br>
+                            <input type="text" required="required" id="txNome" maxlength="100" size="50" class="entrada"><br><bR>
+                        </div>
+                        <div>
+                            <label>Data de Nascimento</label><br>
+                            <input type="date" required="required" id="txtDataNascimento" class="entrada">
+                        </div>
                         <!-- Atividade 2: completar a opções de sexo da pessoa de modo que apenas uma opção possa ser selecionada -->
-                        <label>Sexo:</label><br>
-                        <input type="radio" name="rdoSexo" value="M" required="required">
-                        <label>Masculino</label>
-                        <br><br>
+                        <div>
+                            <label>Sexo:</label><br>
+                            <input type="radio" name="rdoSexo" value="M" required="required" class="entrada">
+                            <label>Masculino</label>
+                            <br><br>
 
-                        <input type="radio" name="rdoSexo" value="F" required="required">
-                        <label>Feminino</label>
-                        <br><br>
 
+                            <input type="radio" name="rdoSexo" value="F" required="required" >
+                            <label>Feminino</label>
+                            <br><br>
+                        </div>
 
                         <!-- Atividade 3: incluir um campo para o endereço (FEITO) -->
-                        <label>Endereço</label><br>
-                        <input type="text"><br><br>
+                        <div>
+                            <label>Endereço</label><br>
+                            <input type="text" class="entrada"><br><br>
+                        </div>
 
-
-
-                        <label>Estado:</label><br>
-                        <select id="cbxEstado" requerid="requerid">
-                            <option value="">-Selecione-</option>
-                            <option value="1">SC</option>
-                            <option value="2">MG</option>
-                        </select><br><br>
-
+                        <div>
+                            <label>Estado:</label><br>
+                            <select id="cbxEstado" requerid="requerid" class="entrada">
+                                <option value="">-Selecione-</option>
+                                <option value="1">SC</option>
+                                <option value="2">MG</option>
+                            </select><br><br>
+                        </div>
                         <!-- Atividade 4: Incluir um campo para a cidade similar ao do estado (FEITO)-->
-                        <label>Cidade:</label><br>
-                        <select id="cbCidade" requerid="requerid">
-                            <option value="">-Selecione-</option>
-                            <option value="1">FL</option>
-                            <option value="2">BH</option>
-                        </select><br><br>
-
+                        <div>
+                            <label>Cidade:</label><br>
+                            <select id="cbCidade" requerid="requerid" class="entrada">
+                                <option value="">-Selecione-</option>
+                                <option value="1">FL</option>
+                                <option value="2">BH</option>
+                            </select><br><br>
+                        </div>
                         <!-- Atividade 5: Incluir um campo para celular contendo placeholder -->
-                        <label>Celular</label><br>
-                        <input type="text" placeholder="(##) #####-####" required="required" size="50"
-                            id="txCelular"><br><br>
-                        
-
-                        <label>E-mail:</label><br>
-                        <input type="email" requerid="requerid" size="50" id="txEmail"><br><br>
-
+                        <div>
+                            <label>Celular</label><br>
+                            <input type="text" placeholder="(##) #####-####" required="required" size="50"
+                                id="txCelular" class="entrada"><br><br>
+                        </div>
+                        <div>
+                            <label>E-mail:</label><br>
+                            <input type="email" requerid="requerid" size="50" id="txEmail" class="entrada"><br><br>
+                        </div>
                         <!-- Atividade 6 completar as opções de interesse (FEITO)-->
-                        <label>Áreas de interesse:</label><br>
-                        <input type="checkbox" value="HTML" nome="chkAreasInteresse">
-                        <label>HTML</label>
-                        <input type="checkbox" value="CSS" nome="chkAreasInteresse">
-                        <label>CSS</label>
-                        <input type="checkbox" value="javascript" nome="chkAreasInteresse">
-                        <label>javaScript</label><br><br>
-                    
+                        <div>
+                            <label>Áreas de interesse:</label><br>
+                            <input type="checkbox" value="HTML" nome="chkAreasInteresse">
+                            <label>HTML</label>
+                            <input type="checkbox" value="CSS" nome="chkAreasInteresse">
+                            <label>CSS</label>
+                            <input type="checkbox" value="javascript" nome="chkAreasInteresse">
+                            <label>javaScript</label><br><br>
+                        </div>
                         <!-- Atividade 7: incluir um campo para mensagem -->
-                        <label for="txtMensagem">Mensagem</label><br>
-                        <textarea id="txtMensagem" cols="50" rows="10" placeholder="Digite sua mensagem" required></textarea><br><br>
-
+                        <div>
+                            <label for="txtMensagem">Mensagem</label><br>
+                            <textarea id="txtMensagem" cols="50" rows="10" placeholder="Digite sua mensagem"
+                                required class="entrada"></textarea><br><br>
+                        </div>
                         <!-- Atividade 8: incluir um botão para enviar um formulário -->
-                        <button>Enviar</button>
-
+                        <div>
+                            <button>Enviar</button>
+                        </div>
                     </form>
                 </fieldset>
 
@@ -133,11 +148,11 @@
                     <img src="./Imagens/logo-twitter.png" alt="Twitter" />
                 </a>
             </li>
-           
+
         </ul>
-     
+
     </footer>
-  
+
 </body>
 
 </html>
